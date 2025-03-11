@@ -50,23 +50,45 @@
     <section id="contact">
       <h1 class="header"><span>Contact</span></h1>
 
-      <form action="#">
-        <div class="input-box">
-          <span>Full Name</span>
-          <input type="text" placeholder="Enter Your Full Name" />
-        </div>
+      <form
+        action="https://formsubmit.co/your-email@gmail.com"
+        method="POST"
+        class="contact-form"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New message from your portfolio site!"
+        />
+        <input type="hidden" name="_captcha" value="false" />
 
-        <div class="input-box">
-          <span>Your Email</span>
-          <input type="text" placeholder="Enter Your Email" />
-        </div>
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter Your Full Name"
+          required
+        />
 
-        <div class="input-box">
-          <span>Your Message</span>
-          <input type="text" placeholder="Enter Your Message" />
-        </div>
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Your Email"
+          required
+        />
 
-        <div class="btn">Submit</div>
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Enter Your Message"
+          required
+        ></textarea>
+
+        <button type="submit">Submit</button>
       </form>
     </section>
   </body>

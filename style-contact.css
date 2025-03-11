@@ -142,39 +142,36 @@ section {
 }
 
 /* CONTACT SECTION */
-#contact {
-  background-color: var(--second-background);
+.contact-section {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-form {
+.contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
+  gap: 10px;
 }
-
-form .input-box {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  gap: 1em;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-
-.input-box span {
-  font-size: 1.5em;
-}
-
-form input {
-  font-size: 1.3em;
-  padding: 1em 5em;
-  border-radius: 0.5em;
+button {
+  padding: 10px;
+  background: #002850;
+  color: white;
   border: none;
-  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
-
-form .input:focus {
-  background: rgb(228, 228, 228);
+button:hover {
+  background: #004080;
 }
 
 footer {
