@@ -4,14 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <title>Aira Joy Mercado | Digital Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="#projects" onclick="window.location.href='projects.html'">Projects</a>
+            <a href="#about" onclick="window.location.href='about.html'">About</a>
+            <a href="#contact" onclick="window.location.href='contact.html'">Contact</a>
+        </div>
 
-    <nav>
+        <div class="nav-center">
+            <a href="#home" class="logo">Aira Joy Mercado</a>
+        </div>
+
+        <div class="nav-right">
+            <a href="https://www.behance.net/airajoymercado" target="_blank" class="icon behance">
+                <i class='bx bxl-behance'></i>
+            </a>
+            <a href="https://www.linkedin.com/in/airaj-mercado/" target="_blank" class="icon linkedin">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="mailto:airamercado@outlook.ph" class="icon mail"><i class='bx bxs-envelope'></i></a>
+        </div>
+    </nav>
+
+    <!-- <nav>
         <a href="#" class="logo"><span>Aira</span></a>
         <ul class="links">
             <a href="#home">Home</a>
@@ -22,14 +43,24 @@
 
         <i class='bx bx-menu-alt-right' id="menu"></i>
 
-        <a href="#contact" class="btn">Contact Me</a>
-    </nav>
+        <a href="#behance" class="btn-icon">
+            <i class='bx bxl-behance'></i>
+        </a>
+        <a href="#linkedin" class="btn-icon">
+            <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="#mail" class="btn-icon">
+            <i class='bx bxs-envelope'></i>
+        </a>
 
+    </nav> -->
+
+    <!-- HOME PAGE -->
     <section id="home">
-        <img src="assets/my-photo.png" alt="">
+        <img src="assets/my-picture.jpg" alt="Graduation Picture">
 
         <div class="info-box">
-            <h1><span>Hello, I'm Aira</span></h1>
+            <h1><span>Hi, I'm Aira Joy!</span></h1>
             <h3><span>Web Developer</span></h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non doloribus mollitia, iure ut consequatur,
                 magni ratione adipisci quod eum voluptatum tempora? Obcaecati odit totam ex voluptate aut soluta illum
@@ -37,11 +68,12 @@
         </div>
 
         <div class="btn-box">
-            <div class="btn">Hire Me</div>
-            <div class="btn">Contact Me</div>
+            <div class="btn"><i class='bx bxs-file-pdf'></i>Get My CV</div>
+            <div class="btn"><i class='bx bxs-phone'></i>Contact Me</div>
         </div>
     </section>
 
+    <!-- ABOUT PAGE -->
     <section id="about">
         <div class="about-box">
 
@@ -77,7 +109,7 @@
             </div>
         </div>
 
-        <img src="assets/my-photo.png" alt="">
+        <img src="assets/my-picture.jpg" alt="Graduation Picture">
     </section>
 
     <section id="projects">
