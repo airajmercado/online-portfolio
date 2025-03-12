@@ -28,7 +28,7 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 1.6em 8%;
+  padding: 24px 4%;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(250, 250, 250, 0.8);
@@ -57,6 +57,10 @@ body {
   opacity: 0.6;
 }
 
+.nav-left a.active {
+  font-weight: 800;
+}
+
 .nav-center {
   position: absolute;
   left: 50%;
@@ -81,21 +85,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
   width: auto;
   height: auto;
-}
-
-.behance i {
-  transform: scale(1.4);
-}
-
-.linkedin i {
-  transform: scale(1.1);
-}
-
-.mail i {
-  transform: scale(1.1);
 }
 
 /* Buttons in General */
@@ -122,6 +113,7 @@ body {
     display: none;
 } */
 
+/* PROJECT SECTION */
 h1 {
   display: flex;
   justify-content: center;
@@ -174,74 +166,145 @@ p {
 
 .project-embed {
   width: 100%;
-  max-width: 900px; /* Adjust to match Adobe Portfolio's width */
-  margin: 0 auto; /* Centers the embed */
-  padding: 20px; /* Adds spacing */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .project-embed iframe {
   width: 100%;
-  height: 540; /* Adjust height as needed */
+  height: 540;
   border: none;
 }
+
+/* OTHER PROJECTS SECTION */
+.other-projects {
+  background-color: var(--background);
+  text-align: center;
+  padding: 40px 5%;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.other-projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.other-projects-container .box {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.other-projects-container .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the box */
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.other-projects-container .box:hover {
+  transform: scale(1.02);
+}
+
+/* Overlay */
+.other-projects-container .overlay {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 24, 48, 0.8);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.other-projects-container .overlay h2 {
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.other-projects-container .box:hover .overlay {
+  opacity: 1;
+}
+
+/* Responsive Design
+@media (max-width: 900px) {
+  .other-projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .other-projects-container {
+    grid-template-columns: 1fr;
+  }
+} */
 
 /* FOOTER SECTION */
 footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10em;
-  bottom: 0;
-  background-color: var(--background);
-  width: 100%;
-  padding: 5em 15%;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #002850;
 }
 
-.col-left {
+.footer-container {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  align-items: center;
+  gap: 15px;
 }
 
-.col-box {
+.contact-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
-  gap: 1em;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #e9eef5;
+  color: #002850;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.col-box {
-  font-size: 2em;
-}
-
-.col-right {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  color: white;
-  max-width: 500px;
-}
-
-.col-right span {
-  font-size: 1.3em;
-}
-
-.col-box .social-icons {
-  display: flex;
-  align-items: baseline;
-  justify-content: left;
-  gap: 1em;
-}
-
-.col-right .social-icons {
-  font-size: 2em;
-  transition: 0.2 ease-in-out;
-  cursor: pointer;
-}
-
-.social-icons i:hover {
+.icon-circle:hover {
+  background-color: #6cace4;
   color: white;
 }
 
+/* RESPONSIVE DESIGN */
 @media (max-width: 968px) {
   section {
     padding: 8em 15%;

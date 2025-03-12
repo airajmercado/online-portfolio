@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>"Arnis E-Motion UI Design</title>
+    <title>Arnis E-Motion Desktop Design</title>
     <link rel="stylesheet" href="projects-style.css" />
     <link rel="icon" href="/assets/favicon.png" type="image/png" />
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
+      href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css"
     />
   </head>
 
@@ -16,7 +16,7 @@
     <!-- NAV BAR -->
     <nav class="navbar">
       <div class="nav-left">
-        <a href="/index.html">Projects</a>
+        <a href="/index.html" class="active">Projects</a>
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact</a>
       </div>
@@ -31,23 +31,24 @@
           target="_blank"
           class="icon behance"
         >
-          <i class="bx bxl-behance"></i>
+          <i class="fa-brands fa-behance"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/airaj-mercado/"
           target="_blank"
           class="icon linkedin"
         >
-          <i class="bx bxl-linkedin"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href="mailto:airamercado@outlook.ph" class="icon mail"
-          ><i class="bx bxs-envelope"></i
-        ></a>
+        <a href="mailto:airamercado@outlook.ph" class="icon mail">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
       </div>
     </nav>
 
+    <!-- PROJECT SECTION -->
     <section class="project-container">
-      <h1 class="title">"Arnis E-Motion UI Design</h1>
+      <h1 class="title">Arnis E-Motion Desktop Design</h1>
       <h2 class="status">Finalized Archive</h2>
       <p class="description">
         A digital learning platform designed to teach Arnis through interactive
@@ -69,5 +70,69 @@
         allowfullscreen
       ></iframe>
     </section>
+
+    <section class="other-projects">
+      <h2>Other Projects</h2>
+      <div class="projects-container other-projects-container">
+        <div class="box">
+          <a href="bms.html">
+            <img src="/assets/bms-logo.jpg" alt="BMS Mobile App" />
+            <div class="overlay">
+              <h2>BMS Mobile App Design<span>2024</span></h2>
+            </div>
+          </a>
+        </div>
+        <div class="box">
+          <a href="cafeon.html">
+            <img src="/assets/cafeon-logo.jpg" alt="NEXPOS" />
+            <div class="overlay">
+              <h2>NEXPOS Mobile App Redesign<span>2024</span></h2>
+            </div>
+          </a>
+        </div>
+        <div class="box">
+          <a href="nexpos.html">
+            <img src="/assets/nexpos-logo.jpg" alt="Caféon" />
+            <div class="overlay">
+              <h2>Caféon Web Design<span>2025</span></h2>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="footer-container">
+        <div class="contact-icons">
+          <a
+            href="https://www.behance.net/airajoymercado"
+            target="_blank"
+            class="icon-circle"
+            ><i class="fa-brands fa-behance"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/airaj-mercado/"
+            target="_blank"
+            class="icon-circle"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="mailto:airamercado@outlook.ph" class="icon-circle"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <!-- <a href="tel:+639762855226" class="icon-circle"
+            ><i class="fa-solid fa-phone-volume"></i
+          ></a> -->
+          <a
+            href="https://t.me/twelvefouram"
+            target="_blank"
+            class="icon-circle"
+            ><i class="fa-solid fa-paper-plane"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

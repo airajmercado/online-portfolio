@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style-contact.css" />
     <link rel="icon" href="assets/favicon.png" type="image/png" />
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
+      href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css"
     />
   </head>
 
@@ -18,7 +18,7 @@
       <div class="nav-left">
         <a href="index.html">Projects</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
       </div>
 
       <div class="nav-center">
@@ -31,18 +31,18 @@
           target="_blank"
           class="icon behance"
         >
-          <i class="bx bxl-behance"></i>
+          <i class="fa-brands fa-behance"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/airaj-mercado/"
           target="_blank"
           class="icon linkedin"
         >
-          <i class="bx bxl-linkedin"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href="mailto:airamercado@outlook.ph" class="icon mail"
-          ><i class="bx bxs-envelope"></i
-        ></a>
+        <a href="mailto:airamercado@outlook.ph" class="icon mail">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
       </div>
     </nav>
 
@@ -87,9 +87,39 @@
           placeholder="Enter Your Message"
           required
         ></textarea>
-
         <button type="submit">Submit</button>
       </form>
     </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="footer-container">
+        <div class="contact-icons">
+          <a
+            href="https://www.behance.net/airajoymercado"
+            target="_blank"
+            class="icon-circle"
+            ><i class="fa-brands fa-behance"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/airaj-mercado/"
+            target="_blank"
+            class="icon-circle"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="mailto:airamercado@outlook.ph" class="icon-circle"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a
+            href="https://t.me/twelvefouram"
+            target="_blank"
+            class="icon-circle"
+            ><i class="fa-solid fa-paper-plane"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

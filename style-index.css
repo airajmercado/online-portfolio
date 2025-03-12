@@ -1,4 +1,4 @@
-/* General Reset */
+/* GENERAL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +6,15 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
-  font-family: "Optima";
+  font-family: "Optima", sans-serif;
 }
 
-/* Colors */
+/* COLORS */
 :root {
   --background: rgb(252, 252, 252);
   --second-background: rgb(254, 254, 254);
+  --main-color: rgb(0, 40, 80);
+  --second-color: rgb(24, 24, 24);
 }
 
 body {
@@ -20,17 +22,17 @@ body {
   background-color: var(--background);
 }
 
-/* Nav Bar */
+/* NAVBAR */
 .navbar {
   display: flex;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  padding: 1.6em 8%;
+  padding: 24px 4%;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(250, 250, 250, 0.8);
+  background-color: rgba(250, 250, 250, 0.9);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -45,15 +47,18 @@ body {
 .nav-left a,
 .nav-right a {
   text-decoration: none;
-  color: rgb(0, 40, 80);
+  color: var(--main-color);
   font-weight: 500;
-  opacity: 1;
   transition: 0.2s ease-in-out;
 }
 
 .nav-left a:hover,
 .nav-right a:hover {
   opacity: 0.6;
+}
+
+.nav-left a.active {
+  font-weight: 800;
 }
 
 .nav-center {
@@ -64,9 +69,8 @@ body {
 
 .nav-center a {
   font-size: 1.4em;
-  color: rgb(0, 40, 80);
+  color: var(--main-color);
   font-weight: 800;
-  opacity: 1;
   transition: 0.2s ease-in-out;
 }
 
@@ -74,33 +78,20 @@ body {
   opacity: 0.6;
 }
 
-/* Icons */
+/* Menu Icons */
 .icon i {
   font-size: 1.2em;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
   width: auto;
   height: auto;
-}
-
-.behance i {
-  transform: scale(1.4);
-}
-
-.linkedin i {
-  transform: scale(1.1);
-}
-
-.mail i {
-  transform: scale(1.1);
 }
 
 /* Buttons in General */
 .btn {
   padding: 1em 2em;
-  color: rgb(24, 24, 24);
+  color: var(--second-color);
   font-size: 1.1em;
   font-weight: 500;
   letter-spacing: 1px;
@@ -115,6 +106,43 @@ body {
   color: var(--background);
 }
 
+/* Hamburger Menu Icon */
+.hamburger-menu {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: var(--main-color);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  flex-direction: column;
+  padding: 1em 0;
+}
+
+.mobile-nav li {
+  margin: 1em 0;
+}
+
+.mobile-nav a {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+}
+
 /* Buttons of Social Links
 .btn-icon {
     padding: 0.5em 1em;
@@ -122,13 +150,6 @@ body {
     cursor: pointer;
     transition: 0.3s ease-in-out;
 } */
-
-span {
-  /* background: linear-gradient(to right, #6cff52, #3ec5ff);
-    background-clip: text;
-    color: transparent; */
-  color: rgb(0, 40, 80);
-}
 
 /* menu {
     color: rgb(24, 24, 24);
@@ -148,7 +169,7 @@ span {
   align-items: center;
   justify-content: center;
   gap: 2em;
-  color: rgb(24, 24, 24);
+  color: var(--second-color);
 }
 
 #home img {
@@ -169,16 +190,19 @@ span {
 .info-box h1 {
   font-size: 4em;
   font-weight: 500;
+  color: var(--main-color);
 }
 
 /* Job Title Position */
 .info-box h3 {
   font-size: 1.6em;
   font-weight: 400;
+  color: var(--main-color);
 }
 
 /* Brief Description */
 .info-box p {
+  color: var(--second-color);
   opacity: 0.8;
 }
 
@@ -189,11 +213,11 @@ span {
 
 .btn-box .btn:nth-of-type(1) {
   background-color: rgb(220, 230, 240);
-  color: rgb(0, 40, 80);
+  color: var(--main-color);
 }
 
 .btn-box .btn:nth-of-type(1):hover {
-  background-color: rgb(0, 40, 80);
+  background-color: var(--main-color);
   color: rgb(220, 230, 240);
 }
 
@@ -207,57 +231,63 @@ span {
   color: rgb(220, 230, 240);
 }
 
-.scroll-down {
+/* Chevron Down */
+.chevron-down {
   display: flex;
-  justify-content: space-between;
-  opacity: 1;
-  color: rgb(0, 40, 80);
-  width: 150px;
-  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
 
-.chevrons {
-  font-size: 6em;
-  transition: transform 0.3s ease;
+.chevron-down i {
+  font-size: 40px;
+  color: rgb(0, 40, 80);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.scrolldown:hover .chevrons {
+.chevron-down:hover i {
+  color: rgb(0, 40, 80);
   opacity: 0.8;
+  animation: bounce 0.5s ease;
 }
 
-/* ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #6cff52, #3ec5ff);
-} */
-
+/* PROJECTS SECTION */
 #projects {
   background-color: var(--background);
   text-align: center;
   padding: 40px 20px;
 }
 
-.header span {
+.header {
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.8em;
   font-weight: bold;
-  /* margin: 0.5em 0; */
+  margin: 3em 0 1.2em;
+  color: var(--main-color);
 }
 
 .projects-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-  gap: 15px;
-  max-width: 1200px;
+  gap: 10px;
+  max-width: 1280px;
   margin: auto;
   padding: 20px;
 }
 
 .box {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: block;
-  overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -273,17 +303,17 @@ span {
 }
 
 .box:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 
 .overlay {
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-  display: flex;
+  background: rgba(4, 24, 48, 0.9);
   justify-content: center;
   align-items: center;
   opacity: 0;
@@ -303,6 +333,7 @@ span {
   margin-top: 5px;
   font-weight: normal;
   opacity: 0.8;
+  color: white;
 }
 
 .box:hover .overlay {
@@ -313,27 +344,75 @@ span {
   font-size: 2em;
 }
 
+/* Chevron Up */
+#chevron-up {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chevron-up i {
+  font-size: 24px;
+  color: #0d3b66; /* Match theme */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.chevron-up:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.chevron-up:hover i {
+  color: #f95738; /* Accent color on hover */
+  animation: bounce 0.5s ease;
+}
+
+/* Same bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* FOOTER SECTION */
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
   padding: 20px;
   background-color: #f8f8f8;
-  color: #002850;
+  color: rgb(0, 40, 80);
 }
 
 .footer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
 }
 
 .contact-icons {
   display: flex;
-  gap: 15px;
+  gap: 18px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -346,8 +425,8 @@ footer {
   justify-content: center;
   border-radius: 50%;
   background-color: #e9eef5;
-  color: #002850;
-  font-size: 1.5em;
+  color: rgb(0, 40, 80);
+  font-size: 1.4em;
   text-decoration: none;
   transition: 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -357,6 +436,7 @@ footer {
   color: white;
 }
 
+/* RESPONSIVE DESIGN */
 @media (max-width: 968px) {
   section {
     padding: 8em 15%;
@@ -393,6 +473,19 @@ footer {
 
   .links.active {
     display: block;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .mobile-nav.active {
+    display: flex;
   }
 
   #home h1 {

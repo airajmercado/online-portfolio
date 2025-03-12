@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="style-index.css" />
     <link rel="icon" href="assets/favicon.png" type="image/png" />
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
+      href="https://unpkg.com/@fortawesome/fontawesome-free/css/all.min.css"
     />
   </head>
 
   <body>
-    <!-- NAV BAR -->
+    <!-- NAVBAR -->
     <nav class="navbar">
       <div class="nav-left">
-        <a href="index.html">Projects</a>
+        <a href="index.html" class="active">Projects</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -31,19 +31,46 @@
           target="_blank"
           class="icon behance"
         >
-          <i class="bx bxl-behance"></i>
+          <i class="fa-brands fa-behance"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/airaj-mercado/"
           target="_blank"
           class="icon linkedin"
         >
-          <i class="bx bxl-linkedin"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
         </a>
-        <a href="mailto:airamercado@outlook.ph" class="icon mail"
-          ><i class="bx bxs-envelope"></i
-        ></a>
+        <a href="mailto:airamercado@outlook.ph" class="icon mail">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
       </div>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="hamburger-menu" id="hamburger-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Navigation Links -->
+      <ul class="mobile-nav" id="mobile-nav">
+        <li><a href="index.html" class="active">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="https://www.behance.net/airajoymercado" target="_blank">
+            <i class="fa-brands fa-behance"></i> Behance
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/airaj-mercado/" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:airamercado@outlook.ph">
+            <i class="fa-solid fa-envelope"></i> Email
+          </a>
+        </li>
+      </ul>
     </nav>
 
     <!-- HOME PAGE -->
@@ -61,53 +88,56 @@
       </div>
 
       <div class="btn-box">
-        <a href="#" class="btn">
-          <i class="bx bxs-file-pdf"></i>&nbsp;Get My CV
+        <a href="assets/AiraJoyMercado_CV_Resume.pdf" class="btn">
+          <i class="fa-solid fa-file-pdf"></i>&nbsp;Get My CV
         </a>
         <a href="tel:+639762855226" class="btn">
-          <i class="bx bxs-phone"></i>&nbsp;Contact Me
+          <i class="fa-solid fa-paper-plane"></i>&nbsp;Contact Me
         </a>
       </div>
 
-      <div class="scroll-down">
-        <span class="chevrons"><i class="bx bx-chevrons-down"></i></span>
-      </div>
+      <a id="chevron-down" class="chevron-down" href="#projects">
+        <i class="fas fa-chevron-down"></i>
+      </a>
     </section>
 
     <!-- PROJECTS PAGE -->
     <section id="projects">
       <h1 class="header"><span>What I've Built</span></h1>
-
       <div class="projects-container">
         <!-- Cafeon Web Design -->
-        <a href="projects/cafeon.html" class="box" target="_blank">
-          <img src="assets/cafeon-logo.jpg" alt="Caféon Web Design Project" />
+        <a href="projects/cafeon.html" class="box">
+          <img src="assets/cafeon-logo.jpg" alt="Caféon" />
           <div class="overlay">
             <h2>Caféon Web Design<span>2025</span></h2>
           </div>
         </a>
         <!-- NEXPOS App Redesign -->
-        <a href="projects/nexpos.html" class="box" target="_blank">
-          <img src="assets/nexpos-logo.jpg" alt="NEXPOS App Redesign Project" />
+        <a href="projects/nexpos.html" class="box">
+          <img src="assets/nexpos-logo.jpg" alt="NEXPOS" />
           <div class="overlay">
             <h2>NEXPOS Mobile App Redesign<span>2024</span></h2>
           </div>
         </a>
         <!-- BMS Mobile App Design -->
-        <a href="projects/bms.html" class="box" target="_blank">
-          <img src="assets/bms-logo.jpg" alt="BMS Mobile App Design Project" />
+        <a href="projects/bms.html" class="box">
+          <img src="assets/bms-logo.jpg" alt="BMS Mobile App" />
           <div class="overlay">
             <h2>BMS Mobile App Design<span>2024</span></h2>
           </div>
         </a>
-        <!-- Arnis E-Motion UI Design -->
-        <a href="projects/arnis-e-motion.html" class="box" target="_blank">
-          <img src="assets/aem-logo.jpg" alt="Arnis E-Motion UI Design" />
+        <!-- Arnis E-Motion Desktop Design -->
+        <a href="projects/aem.html" class="box">
+          <img src="assets/aem-logo.jpg" alt="Arnis E-Motion" />
           <div class="overlay">
             <h2>Arnis E-Motion Desktop App Design<span>2023</span></h2>
           </div>
         </a>
       </div>
+
+      <a id="chevron-up" class="chevron-up" href="#home">
+        <i class="fas fa-chevron-up"></i>
+      </a>
     </section>
 
     <!-- FOOTER SECTION -->
@@ -118,25 +148,25 @@
             href="https://www.behance.net/airajoymercado"
             target="_blank"
             class="icon-circle"
-            ><i class="bx bxl-behance"></i
+            ><i class="fa-brands fa-behance"></i
           ></a>
           <a
             href="https://www.linkedin.com/in/airaj-mercado/"
             target="_blank"
             class="icon-circle"
-            ><i class="bx bxl-linkedin"></i
+            ><i class="fa-brands fa-linkedin-in"></i
           ></a>
           <a href="mailto:airamercado@outlook.ph" class="icon-circle"
-            ><i class="bx bxs-envelope"></i
+            ><i class="fa-solid fa-envelope"></i
           ></a>
-          <a href="tel:+639762855226" class="icon-circle"
-            ><i class="bx bxs-phone"></i
-          ></a>
+          <!-- <a href="tel:+639762855226" class="icon-circle"
+            ><i class="fa-solid fa-phone-volume"></i
+          ></a> -->
           <a
             href="https://t.me/twelvefouram"
             target="_blank"
             class="icon-circle"
-            ><i class="bx bxl-telegram"></i
+            ><i class="fa-solid fa-paper-plane"></i
           ></a>
         </div>
       </div>
